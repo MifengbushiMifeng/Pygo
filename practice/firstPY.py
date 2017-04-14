@@ -27,6 +27,7 @@ print u'\u4e2d'
 print u'中'.encode('utf-8')
 print len('ABC')
 
+# %d for int; %f for float; %s for string; %x for hex-int
 testStr = 'Hello, %s'
 testStr %= 'world'
 print testStr
@@ -34,3 +35,11 @@ print testStr
 testStr2 = 'Hi, %s, you have $%d.'
 testStr2 %= ('Jonathan', 1000000)
 print testStr2
+
+print '%2d-%02d' % (3, 1)
+print '%.3f' % 3.1415926
+
+# If you not sure which %? is the right choice, %s will always works
+print 'Age: %s. Gender: %s' % (25, True)
+
+print 'growth rate: %d %%' % 7
