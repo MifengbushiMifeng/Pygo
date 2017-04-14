@@ -26,3 +26,11 @@ print classmates
 
 classmates[1] = 'Sarah'
 print classmates
+
+mixed = ['Apple', 123, False]
+print mixed
+
+objArr = ['python', 'java', ['asp', 'php'], 'scheme']
+print len(objArr)
+
+print objArr[2][1]
