@@ -25,7 +25,7 @@ print dictScores
 # practice of set in python
 # s = {1, 2, 3, 3, 4}
 
-s = set([1, 2, 3, 4])
+s = {1, 2, 3, 4}
 print s
 
 s.add(5)
