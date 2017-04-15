@@ -21,3 +21,21 @@ print dictScores.get('Thomas', -1)
 bob = dictScores.pop('Bob')
 print bob
 print dictScores
+
+# practice of set in python
+# s = {1, 2, 3, 3, 4}
+
+s = set([1, 2, 3, 4])
+print s
+
+s.add(5)
+s.add(4)
+
+print s
+s.remove(4)
+print s
+
+s1 = set([1, 2, 3])
+s2 = set([2, 3, 4])
+print s1 & s2
+print s1 | s2
