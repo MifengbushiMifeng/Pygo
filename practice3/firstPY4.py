@@ -39,3 +39,12 @@ s1 = set([1, 2, 3])
 s2 = set([2, 3, 4])
 print s1 & s2
 print s1 | s2
+
+# practice of un-change obj in python
+a = ['c', 'b', 'a']
+a.sort()
+print a
+
+a = 'abc'
+print a.replace('a', 'A')
+print a
