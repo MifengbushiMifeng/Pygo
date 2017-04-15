@@ -23,3 +23,24 @@ elif age >= 6:
     print 'teenager'
 else:
     print 'kid'
+
+print '####################'
+
+# Loop
+names = ['Michael', 'Bob', 'Tracy']
+for name in names:
+    print name
+
+print range(4)
+
+sum = 0
+for x in range(101):
+    sum += x
+print sum
+
+sum2 = 0
+n = 99
+while n >= 0:
+    sum2 += n
+    n -= 2
+print sum2
