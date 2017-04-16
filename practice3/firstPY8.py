@@ -11,3 +11,12 @@ func(1, 2, 3, 'a', 'b', x=99)
 args = (1, 2, 3, 4)
 other = {'x': 99}
 func(*args, **other)
+
+
+def fact(n):
+    if n == 1:
+        return 1
+    return n * fact(n - 1)
+
+
+print fact(5)
