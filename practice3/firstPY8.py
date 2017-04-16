@@ -20,3 +20,15 @@ def fact(n):
 
 
 print fact(5)
+
+# practice slice in python
+
+L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack']
+print L[0:3]
+print L[:3]
+print L[-2:]
+print L[-2:-1]
+
+L2 = range(100)
+print L2[:10:2]
+print L2[::5]
