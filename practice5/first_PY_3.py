@@ -30,3 +30,15 @@ def count2():
 
 f4, f5, f6 = count2()
 print f4, f5, f6
+
+print map(lambda x: x * x, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+f7 = lambda x: x * x
+
+print f7(6)
+
+
+def build(x, y):
+    return lambda: x * x + y * y
+
+
+print build(1, 3)()
