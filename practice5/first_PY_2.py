@@ -28,3 +28,28 @@ def cmp_ignore_case(s1, s2):
 
 
 print sorted(arr_str, cmp_ignore_case)
+
+
+def calc_sum(*args):
+    ax = 0
+    for n in args:
+        ax = ax + n
+    return ax
+
+
+print calc_sum(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+
+def lazy_sum(*args):
+    def sum():
+        ax = 0
+        for n in args:
+            ax = ax + n
+        return ax
+
+    return sum
+
+
+f = lazy_sum(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+print f()
