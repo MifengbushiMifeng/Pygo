@@ -19,3 +19,8 @@ def test():
 
 if __name__ == '__main__':
     test()
+
+
+class Hello(object):
+    def hello(self, name='world'):
+        print 'Hello, %s.' % name
