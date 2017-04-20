@@ -6,11 +6,11 @@
 # print f.read()
 import codecs
 
-filePath = 'C:\Users\IBM_ADMIN\Desktop\event-log\\test.txt'
+file_Path = 'C:\Users\IBM_ADMIN\Desktop\event-log\\test.txt'
 
 
-def read_file(filePath):
-    f = open(filePath, 'r')
+def read_file(file_path):
+    f = open(file_path, 'r')
     print f.name
     print f.read()
     f.close()
@@ -19,24 +19,24 @@ def read_file(filePath):
 # read_file(filePath)
 
 
-def read_file2(filePath):
-    with open(filePath, 'r') as f:
+def read_file2(file_path):
+    with open(file_path, 'r') as f:
         print f.read()
 
 
 # read_file2(filePath)
 
 
-def read_file3(filePath):
-    with open(filePath, 'r') as f:
+def read_file3(file_path):
+    with open(file_path, 'r') as f:
         for line in f.readlines():
             print line.strip()
 
 
 # read_file3(filePath)
 
-def read_file4(filePath):
-    f = open(filePath, 'rb')
+def read_file4(file_path):
+    f = open(file_path, 'rb')
     u = f.read().decode('gbk')
     print u
 
@@ -48,4 +48,4 @@ def read_file5(filePath):
         print f.read()
 
 
-read_file5(filePath)
+read_file5(file_Path)
