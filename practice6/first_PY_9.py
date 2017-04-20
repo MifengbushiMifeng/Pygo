@@ -15,13 +15,13 @@ class Field(object):
 
 
 class StringField(Field):
-    def __int__(self, name):
+    def __init__(self, name):
         super(StringField, self).__init__(name, 'varchar(100)')
 
 
-class IntergerField(Field):
+class IntegerField(Field):
     def __init__(self, name):
-        super(IntergerField, self).__init__(name, 'bigint')
+        super(IntegerField, self).__init__(name, 'bigint')
 
 
 # design the meta-class
@@ -42,8 +42,40 @@ class ModelMetaclass(type):
 
 
 class Model(dict):
-    pass
+    __metaclass__ = ModelMetaclass
+
+    def __init__(self, **kw):
+        super(Model, self).__init__(**kw)
+
+    def __getattr__(self, key):
+        try:
+            return self[key]
+        except KeyError:
+            raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+
+    def __setattr__(self, key, value):
+        self[key] = value
+
+    def save(self):
+        fields = []
+        params = []
+        args = []
+
+        for k, v in self.__mappings__.iteritems():
+            fields.append(v.name)
+            params.append('?')
+            args.append(getattr(self, k, None))
+        sql = 'insert into %s (%s) values (%s)' % (self.__table__, ','.join(fields), ','.join(params))
+        print('SQL: %s' % sql)
+        print('ARGS: %s' % str(args))
 
 
 class User(Model):
-    pass
+    id = IntegerField('id')
+    name = StringField('username')
+    email = StringField('email')
+    password = StringField('password')
+
+
+u = User(id=12345, name='Michael', email='test@org.com', password='my-pwd')
+u.save()
