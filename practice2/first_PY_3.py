@@ -1,6 +1,6 @@
 # !/usr/bin/env python
 # encoding=utf-8
-from collections import deque, defaultdict, OrderedDict
+from collections import deque, defaultdict, OrderedDict, Counter
 
 # practice deque in Python
 q = deque(['a', 'b', 'c'])
@@ -25,3 +25,7 @@ od2['y'] = 2
 od2['x'] = 3
 print od2.keys()
 
+c = Counter()
+for ch in 'I love python':
+    c[ch] += 1
+print c
