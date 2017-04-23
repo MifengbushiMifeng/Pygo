@@ -7,6 +7,9 @@ from htmlentitydefs import name2codepoint
 # practice HTMLParser in python
 
 class MyHTMLParser(HTMLParser):
+    def error(self, message):
+        pass
+
     def handle_starttag(self, tag, attrs):
         print '<%s>' % tag
 
