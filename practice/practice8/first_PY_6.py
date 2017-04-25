@@ -23,3 +23,11 @@ print time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 cal = calendar.month(2017, 4)
 print cal
+
+# practice list comprehensions
+l = [m + n for m in 'ABC' for n in 'XYZ']
+print l
+
+l2 = ['Hello', 'World', 18, 'Apple', 'IBM', None]
+l3 = [value.lower() for value in l2 if isinstance(value, str)]
+print l3
