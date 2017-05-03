@@ -4,6 +4,8 @@ def foo(*args, **kw):
     print 'args: ', args
     print 'kw: ', kw
     print '-------------------'
+    print type(kw)
+    print kw.pop('test', 123123)
 
 
 if __name__ == '__main__':
