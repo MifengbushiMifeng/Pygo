@@ -17,3 +17,9 @@ print func(L2)
 
 str = '123456789'
 print str[::-1]
+
+str2 = "this is really a string example....wow!!!";
+substr = "is";
+
+print str2.rfind(substr)
+print str2.find(substr)
