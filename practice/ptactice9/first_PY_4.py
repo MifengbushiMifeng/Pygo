@@ -14,3 +14,6 @@ def func(aL):
 
 print func(L)
 print func(L2)
+
+str = '123456789'
+print str[::-1]
