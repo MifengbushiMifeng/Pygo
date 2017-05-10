@@ -21,3 +21,8 @@ value = '27'
 unknow = (name, value)
 print unknow
 print type(unknow)
+
+a = 4.2
+b = 2.1
+print a + b == 6.3
+print a + b is 6.3
