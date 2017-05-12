@@ -6,6 +6,8 @@ L = ['Jonathan', 'Tim', 'Mike']
 j, t, m = L
 print j, t, m
 
+print '------------------'
+
 
 def file_list(file_path):
     for root, dirs, files in os.walk(file_path):
